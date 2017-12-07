@@ -18,7 +18,7 @@ S ->  S S +  | S S * | a
 
 2) 根据 1) 的解答
 
-![](/resources/section2/2.2.1-1.png)
+![](resources/section2/2.2.1-1.png)
 
 3) 该文法生成的应该是只有加法和乘法运算的后缀数学表达式。具体怎么该证明还没有想法。
 
@@ -30,9 +30,9 @@ S ->  S S +  | S S * | a
 
 2) S-> + S S | - S S | a
 
-3) S -> S ( S ) S | $\epsilon$
+3) S -> S ( S ) S | $$\epsilon$$
 
-4) S -> a S b S | b S a S | $\epsilon$
+4) S -> a S b S | b S a S | $$\epsilon$$
 
 5) S -> a | S + S | S S | S * | ( S )
 
@@ -121,15 +121,15 @@ expr -> 9 | '9'
 
 首先写出表达式 9 - 5 + 2 的语法分析树
 
-![](2.3.1-1.png)
+![](resources/section2/2.3.1-1.png)
 
 然后再利用语义规则转换成注释分析树
 
-![](2.3.1-2.png)
+![](resources/section2/2.3.1-2.png)
 
 然后是 9 - 5 * 2 的注释分析树（同样的原理）
 
-![](2.3.1-3.png)
+![](resources/section2/2.3.1-3.png)
 
 ### 练习 2.3.2：
 
@@ -150,11 +150,11 @@ expr -> 9 | '9'
 
 注释分析树 95-2\*
 
-![](2.3.2-1.png)
+![](resources/section2/2.3.2-1.png)
 
 注释分析树 952\*-
 
-![](2.3.2-2.png)
+![](resources/section2/2.3.2-2.png)
 
 ### 练习 2.3.3：
 
@@ -175,7 +175,7 @@ expr -> 9 | '9'
 
 1) S -> + S S | - S S | a
 
-2) S -> S ( S ) S | $\epsilon$
+2) S -> S ( S ) S | $$\epsilon$$
 
 3) S -> 0 S 1  | 0 1
 
@@ -228,37 +228,4 @@ void S() {
     case 1;
   }
 }
-```
-
-## 3.1 节的练习
-
-### 练习3.1.1
-
-根据3.1.2 节中的讨论，将下面的C++程序
-
-```c++
-float limitSquare(x) {float x;
-  /* returns x-squared, but never more than 100*/
-  return (x <=  -10.0 || x >= 10.0) ? 100: x*x;
-}
-```
-划分成正确的词素序列。哪些词素应该有相关联的词法值，应该具有什么值？
-
-解答：
-```
-<id, float>
-<id, limitSquare>
-<id, x>
-<id, float>
-<id, x>
-<id, return>
-<id, x>
-<comparasion, <=>
-<number, -10.0>
-<?>
-<number, 100>
-<:>
-<id, x>
-<op, *>
-<id, x>
 ```
