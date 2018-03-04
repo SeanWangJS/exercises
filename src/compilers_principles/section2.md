@@ -30,9 +30,9 @@ S ->  S S +  | S S * | a
 
 2) S-> + S S | - S S | a
 
-3) S -> S ( S ) S | $$\epsilon$$
+3) S -> S ( S ) S | $\epsilon$
 
-4) S -> a S b S | b S a S | $$\epsilon$$
+4) S -> a S b S | b S a S | $\epsilon$
 
 5) S -> a | S + S | S S | S * | ( S )
 
@@ -175,7 +175,7 @@ expr -> 9 | '9'
 
 1) S -> + S S | - S S | a
 
-2) S -> S ( S ) S | $$\epsilon$$
+2) S -> S ( S ) S | $\epsilon$
 
 3) S -> 0 S 1  | 0 1
 
